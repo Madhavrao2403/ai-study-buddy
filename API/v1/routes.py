@@ -26,7 +26,7 @@ def register_user(user:RegisterRequest):
     existing_user = get_user_by_username(user.username)
     if existing_user:
         raise HTTPException(
-            status_code = status.HTTP_404_BAD_REQUEST,
+            status_code = status.HTTP_400_BAD_REQUEST,
             detail = "Username already exists"
         )
     
@@ -42,7 +42,7 @@ def login_user(user:LoginRequest):
     access_token = create_access_token(data={"sub":user.username})
     if not db_user or not verify_password(user.password,db_user["hashed_password"]):
         raise HTTPException(
-            status_code = status.HTTP_401_UNAUTHORIZED,
+            status_code = status.HTTP_404_UNAUTHORIZED,
             detail="Invalid credentials"
         )
     else:
