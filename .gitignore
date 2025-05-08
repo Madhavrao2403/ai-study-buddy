@@ -1,0 +1,40 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# API keys and secrets
+.env
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Editor and IDE settings
+.vscode/
+.idea/
+
+# Log files
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Python packaging
+*.egg-info/
+build/
+dist/
+
+# Testing and cache
+.pytest_cache/
+.mypy_cache/
+.tox/
+.coverage
+
+# Jupyter (if used)
+.ipynb_checkpoints/
+
+# Optional: FastAPI static/media files if generated
+static/
+media/
