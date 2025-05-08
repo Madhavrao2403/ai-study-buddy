@@ -1,10 +1,10 @@
-from fastapi import APIRouter, HTTPException, status,Query # type: ignore
+from fastapi import APIRouter, HTTPException, status,Query 
 from pydantic import BaseModel
 from datetime import timedelta
 from core.utils import hash_password,verify_password,create_access_token
 from core.db import get_user_by_username, add_user
 from services.stt_service import handle_speak
-from fastapi.responses import RedirectResponse # type: ignore
+from fastapi.responses import RedirectResponse 
 
 router = APIRouter()
 
